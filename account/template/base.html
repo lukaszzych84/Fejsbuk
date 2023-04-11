@@ -1,12 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
 <head>
   <title>{% block title %}{% endblock %}</title>
   <link href="{% static "css/base.css" %}" rel="stylesheet">
 </head>
 <body>
-  <div id="header">
+  <div id="">
     <span class="logo">Bookmarks</span>
     {% if request.user.is_authenticated %}
     <ul class="menu">
@@ -23,7 +22,7 @@
   {% endif %}
   <span class="user">
     {% if request.user.is_authenticated %}
-      Witaj {{ request.user.first_name }}!
+      Witaj {{ request.user.first_name }},
       <a href="{% url "logout" %}">Wyloguj się</a>
     {% else %}
       <a href="{% url "login" %}">Zaloguj się</a>

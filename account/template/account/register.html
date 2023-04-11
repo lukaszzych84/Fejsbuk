@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+
 {% block title %}Utwórz konto{% endblock %}
 
 {% block content %}
@@ -7,7 +8,7 @@
   <p>Zarejestruj się korzystając z poniższego formularza:</p>
   <form method="post">
     {{ user_form.as_p }}
-    {% csrf_token %}
+      {% csrf_token %}
     <p><input type="submit" value="Utwórz konto"></p>
   </form>
 {% endblock %}
